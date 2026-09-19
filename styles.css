@@ -20,6 +20,8 @@
   --radius: 10px;
   --space: 16px;
   --tap-size: 44px;
+  --amount-col: 96px; /* 金額欄：6 桁 ＋「円」が収まる幅 */
+  --row-icon-col: 32px; /* 行削除アイコン欄（高さはタップしやすい 44px のまま） */
 }
 
 *, *::before, *::after { box-sizing: border-box; }
@@ -97,6 +99,7 @@ button, input { font: inherit; color: inherit; }
   cursor: pointer;
 }
 .icon-btn svg { width: 20px; height: 20px; }
+.row .icon-btn { width: var(--row-icon-col); }
 
 /* 参加者ブロック */
 .participants {
@@ -145,8 +148,8 @@ button, input { font: inherit; color: inherit; }
 
 .row-head, .row {
   display: grid;
-  grid-template-columns: 1fr 7.5em var(--tap-size);
-  gap: 8px;
+  grid-template-columns: minmax(0, 1fr) var(--amount-col) var(--row-icon-col);
+  gap: 6px;
   align-items: center;
 }
 .row-head { font-size: 0.75rem; color: var(--color-muted); padding-bottom: 4px; }
@@ -163,11 +166,11 @@ button, input { font: inherit; color: inherit; }
 }
 .input-amount { text-align: right; font-variant-numeric: tabular-nums; }
 .amount-wrap { position: relative; }
-.amount-wrap .input-amount { padding-right: 1.9em; }
+.amount-wrap .input-amount { padding-left: 8px; padding-right: 26px; }
 .amount-wrap::after {
   content: "円";
   position: absolute;
-  right: 10px;
+  right: 8px;
   top: 50%;
   transform: translateY(-50%);
   color: var(--color-muted);

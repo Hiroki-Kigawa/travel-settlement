@@ -10,7 +10,7 @@
   const DEFAULT_PARTICIPANTS = 2;
   const DEFAULT_ROWS = 3;
   const MIN_PARTICIPANTS = 2;
-  const MAX_AMOUNT_DIGITS = 8; // 1 行あたり最大 99,999,999 円
+  const MAX_AMOUNT_DIGITS = 6; // 1 行あたり最大 999,999 円
   const MAX_NAME_LENGTH = 20;
 
   const ICONS = {
