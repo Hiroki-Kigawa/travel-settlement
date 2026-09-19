@@ -39,7 +39,7 @@ styles.css             スタイル（冒頭の :root 変数で色・フォン�
 settle.js              精算ロジック（DOM 非依存）
 app.js                 画面描画・入力・保存・ルーティング
 manifest.webmanifest   Android 向けホーム画面設定
-icons/                 アイコン（現在は仮）
+icons/                 ホーム画面アイコン（iOS 用：icon-180.png、Android 用：icon-192.png / icon-512.png）
 ```
 
 ## ローカルでの確認
@@ -57,7 +57,8 @@ python3 -m http.server 8430
 
 ## 差し替え予定
 
-- **アイコン**：`icons/` 内の同名ファイル（`icon-180.png` / `icon-192.png` / `icon-512.png` / `icon.svg`）を置き換える
+- **アイコン**：`icons/` 内の同名ファイルを置き換え、`index.html` と `manifest.webmanifest` の `?v=` の数字を上げる
+  （角丸は各 OS がかけるため、画像は四隅まで絵柄のある正方形にする）
 - **デザイン**：`styles.css` 冒頭の `:root` 変数を中心に変更する（現在のトーンは仮）
 
 ## GitHub Pages での公開
