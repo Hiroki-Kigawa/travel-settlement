@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <!-- 仮アイコン（正式版の受領後に差し替え） -->
+  <rect width="512" height="512" fill="#2f6f73"/>
+  <g fill="none" stroke="#ffffff" stroke-width="28" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M186 132 L256 236 L326 132"/>
+    <path d="M256 236 V380"/>
+    <path d="M190 262 H322"/>
+    <path d="M190 318 H322"/>
+  </g>
+</svg>

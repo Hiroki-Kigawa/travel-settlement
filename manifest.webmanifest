@@ -1,0 +1,16 @@
+{
+  "name": "旅行精算ツール",
+  "short_name": "旅行精算",
+  "description": "旅行中に立て替えた費用から、誰が誰にいくら渡せばよいかを計算する割り勘ツール",
+  "lang": "ja",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#f6f5f2",
+  "theme_color": "#2f6f73",
+  "icons": [
+    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
+    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}

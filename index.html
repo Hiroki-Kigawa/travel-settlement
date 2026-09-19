@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <title>旅行精算ツール</title>
+  <meta name="description" content="旅行中に立て替えた費用から、誰が誰にいくら渡せばよいかを計算する割り勘ツール">
+  <meta name="theme-color" content="#2f6f73">
+
+  <!-- ホーム画面アイコン（仮。正式版は icons/ 内の同名ファイルを差し替える） -->
+  <link rel="icon" href="icons/icon.svg" type="image/svg+xml">
+  <link rel="icon" href="icons/icon-192.png" sizes="192x192" type="image/png">
+  <link rel="apple-touch-icon" href="icons/icon-180.png" sizes="180x180">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-title" content="旅行精算">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1 class="site-title"><a href="#/">旅行精算ツール</a></h1>
+  </header>
+
+  <main id="view" class="container"></main>
+
+  <!-- 確認モーダル（リセット・参加者の削除で共用） -->
+  <dialog id="confirm-dialog" class="dialog" aria-labelledby="confirm-title">
+    <form method="dialog" class="dialog-body">
+      <h2 id="confirm-title" class="dialog-title"></h2>
+      <p id="confirm-message" class="dialog-message"></p>
+      <div class="dialog-actions">
+        <button type="submit" value="cancel" class="btn btn-secondary">キャンセル</button>
+        <button type="submit" value="ok" class="btn btn-danger" id="confirm-ok"></button>
+      </div>
+    </form>
+  </dialog>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="settle.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
