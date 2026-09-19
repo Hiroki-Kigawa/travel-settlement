@@ -50,6 +50,11 @@ python3 -m http.server 8430
 
 ブラウザで http://localhost:8430 を開きます。
 
+## 更新時の注意
+
+`styles.css` / `settle.js` / `app.js` を変更したら、`index.html` で読み込んでいる `?v=` の数字を上げてください。
+上げないと、ホーム画面に追加した iPhone などで古いファイルがキャッシュされたまま表示されることがあります。
+
 ## 差し替え予定
 
 - **アイコン**：`icons/` 内の同名ファイル（`icon-180.png` / `icon-192.png` / `icon-512.png` / `icon.svg`）を置き換える
